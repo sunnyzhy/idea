@@ -6,7 +6,7 @@ controller:
 
 ```java
 @PostMapping(value = {"/upload"})
-public bool upload(@RequestParam MultipartFile file, @RequestParam Map<String, Object> params)
+public boolean upload(@RequestParam MultipartFile file, @RequestParam Map<String, Object> params)
 ```
 
 HTTP Client Tool:
