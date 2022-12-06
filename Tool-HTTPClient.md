@@ -37,21 +37,28 @@ Content-Disposition: form-data; name="file"; filename="a5cada5f09044eda974782e1d
 - ```--WebAppBoundary```: 是上文定义的分隔边界，```form-data``` 所有的参数均包含在 ```--WebAppBoundary``` 和 ```--WebAppBoundary--``` 之间，其中各参数之间用 ```--WebAppBoundary``` 分隔
 - ```form-data``` 参数对应 ```controller``` 接口参数
 - ```groupId```: ```form-data``` 参数
+   
    ```
    Content-Disposition: form-data; name="groupId"
    
    1
    ```
+   
    注意:
-      - 上下文中间有一行空白行
-      - ```groupId``` 是 ```controller``` 接口参数 ```Map<String, Object> params``` 里的自定义参数之一
+
+   - 上下文中间有一行空白行
+   - ```groupId``` 是 ```controller``` 接口参数 ```Map<String, Object> params``` 里的自定义参数之一
+
 - ```file```: ```form-data``` 参数，定义上传的文件
+   
    ```
    Content-Disposition: form-data; name="file"; filename="a5cada5f09044eda974782e1dd94ac78.xlsx"
    
    < D:\upload\a5cada5f09044eda974782e1dd94ac78.xlsx
    ```
+   
    注意:
-      - 须指定 ```filename``` 和具体的文件路径
-      - 上下文中间有一行空白行
-      - ```file``` 对应 ```controller``` 接口参数 ```MultipartFile file```，名称必须对应
+
+   - 须指定 ```filename``` 和具体的文件路径
+   - 上下文中间有一行空白行
+   - ```file``` 对应 ```controller``` 接口参数 ```MultipartFile file```，名称必须对应
