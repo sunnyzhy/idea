@@ -11,7 +11,7 @@ public boolean upload(@RequestParam MultipartFile file, @RequestParam Map<String
 
 HTTP Client Tool:
 
-```http
+```
 POST http://localhost:8080/upload
 Content-Type: multipart/form-data; boundary=WebAppBoundary
 token: 2aed1dc9-7507-11ed-93d8-7427ea652c28
@@ -34,7 +34,7 @@ Content-Disposition: form-data; name="file"; filename="a5cada5f09044eda974782e1d
 - ```Content-Type: multipart/form-data;```: 上传文件，```http``` 必须包含此请求头
 - ```boundary=WebAppBoundary```: 定义 ```form-data``` 各个参数之间的分隔边界符
 - ```token: 2aed1dc9-7507-11ed-93d8-7427ea652c28```: 自定义 ```http``` 请求头的上下文参数
-- ```--WebAppBoundary```: 是上文定义的分隔边界，```form-data``` 的所有参数均包含在 ```--WebAppBoundary``` 和 ```--WebAppBoundary--``` 之间，其中各参数之间用 ```--WebAppBoundary``` 分隔
+- ```--WebAppBoundary```: 是上文定义的分隔边界，```form-data``` 所有的参数均包含在 ```--WebAppBoundary``` 和 ```--WebAppBoundary--``` 之间，其中各参数之间用 ```--WebAppBoundary``` 分隔
 - ```form-data``` 参数对应 ```controller``` 接口参数
 - ```groupId```: ```form-data``` 参数
    ```
