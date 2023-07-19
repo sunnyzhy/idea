@@ -87,6 +87,28 @@ void trim(String s) throws IllegalAccessException, NoSuchFieldException {
 }
 ```
 
+## 使用 ```@AutoTrim``` 注解
+
+github 网址：```https://github.com/supalle/auto-trim.git```
+
+***仅支持 ：```java.lang.String：``` 类型的变量进行 ：```AutoTrim：``` 操作。***
+
+1. 添加依赖
+    ```xml
+    <dependency>
+        <groupId>com.supalle</groupId>
+        <artifactId>auto-trim</artifactId>
+        <version>1.0.0</version>
+        <scope>provided</scope>
+    </dependency>
+    ```
+2. ```@AutoTrim``` 注解可以作用于：
+   - ```ElementType.TYPE```：class类、接口
+   - ```ElementType.CONSTRUCTOR```：构造函数
+   - ```ElementType.FIELD```：属性
+   - ```ElementType.METHOD```：方法
+   - ```ElementType.PARAMETER```：方法形参
+
 ## Mybatis
 
 ```java
