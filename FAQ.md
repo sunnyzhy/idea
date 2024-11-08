@@ -164,7 +164,7 @@ Windows:
 
 Windows directory:
 
-- **%APPDATA%: C:Users\username\AppData\Roaming***
+- **%APPDATA%: C:Users\username\AppData\Roaming**
 - **%LOCALAPPDATA%: C:\Users\username\AppData\Local**
 
 macOS:
