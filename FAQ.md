@@ -136,7 +136,7 @@ Caused by: java.lang.NoClassDefFoundError
 1. 根据抛出的错误信息找出冲突的依赖
 2. 修改依赖的版本号，大多数情况需要降低版本号
 
-## IDEA 启动报错 https://jb.gg/ide/critical-startup-errors
+## IDEA 启动报错 ```https://jb.gg/ide/critical-startup-errors```
 
 ```
 Resolution
@@ -161,6 +161,8 @@ Windows:
 - Plugins (idea.plugins.path): %APPDATA%\JetBrains\IntelliJIdea2022.2\plugins
 - System (idea.system.path): %LOCALAPPDATA%\JetBrains\IntelliJIdea2022.2
 - Logs (idea.log.path): %LOCALAPPDATA%\JetBrains\IntelliJIdea2022.2\log
+
+Windows directory:
 
 - **%APPDATA%: C:Users\username\AppData\Roaming***
 - **%LOCALAPPDATA%: C:\Users\username\AppData\Local**
