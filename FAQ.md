@@ -135,3 +135,46 @@ Caused by: java.lang.NoClassDefFoundError
 
 1. 根据抛出的错误信息找出冲突的依赖
 2. 修改依赖的版本号，大多数情况需要降低版本号
+
+## IDEA 启动报错 https://jb.gg/ide/critical-startup-errors
+
+```
+Resolution
+Please try the following steps one by one until the issue is resolved:
+
+In case of "java.nio.file.AccessDeniedException: ...plugins\github-copilot-intellij\copilot-agent\bin\copilot-agent-win.exe", please see this Copilot discussion and the corresponding issue.
+If you get "java.net.BindException: Address already in use: bind" exception, please refer to IDEA-238995 for the workaround.
+Delete the third-party plug-ins directory (idea.plugins.path in the user's home directory, depends on the OS and IDE version. Please be aware that default locations have changed in 2020.1 release). You can bisect the plug-ins to find the offending one and remove only that plug-in, keeping the working plug-ins.
+
+Note: if the installation is managed by the Toolbox App, plug-ins directory will be located next to the application install location which can be found from the Toolbox properties of the installed app. Look for the directory name starting with the build number and ending with the .plugins, like 192.5728.98.plugins.
+Download and install the IDE again, either from the official site or using the Toolbox App. Your settings and projects will be preserved. When installing from .tar.gz on Linux make sure to unpack into the new empty directory, not on the top of the existing installation.
+Delete the IDE system (idea.system.path) directory.
+In most cases the issue should be already resolved, but if the IDE still doesn't start with the same error dialog, you can also try to backup and delete the configuration directory (idea.config.path).
+Contact support with the full exception stacktrace (you can copy/paste it from the error dialog).
+```
+
+Examples for IntelliJ IDEA 2022.2:
+
+Windows:
+
+- Configuration (idea.config.path): %APPDATA%\JetBrains\IntelliJIdea2022.2
+- Plugins (idea.plugins.path): %APPDATA%\JetBrains\IntelliJIdea2022.2\plugins
+- System (idea.system.path): %LOCALAPPDATA%\JetBrains\IntelliJIdea2022.2
+- Logs (idea.log.path): %LOCALAPPDATA%\JetBrains\IntelliJIdea2022.2\log
+
+- **%APPDATA%: C:Users\username\AppData\Roaming***
+- **%LOCALAPPDATA%: C:\Users\username\AppData\Local**
+
+macOS:
+
+- Configuration (idea.config.path): ~/Library/Application Support/JetBrains/IntelliJIdea2022.2
+- Plugins (idea.plugins.path): ~/Library/Application Support/JetBrains/IntelliJIdea2022.2/plugins
+- System (idea.system.path): ~/Library/Caches/JetBrains/IntelliJIdea2022.2
+- Logs (idea.log.path): ~/Library/Logs/JetBrains/IntelliJIdea2022.2
+
+Linux:
+
+- Configuration (idea.config.path): ~/.config/JetBrains/IntelliJIdea2022.2
+- Plugins (idea.plugins.path): ~/.local/share/JetBrains/IntelliJIdea2022.2
+- System (idea.system.path): ~/.cache/JetBrains/IntelliJIdea2022.2
+- Logs (idea.log.path): ~/.cache/JetBrains/IntelliJIdea2022.2/log
